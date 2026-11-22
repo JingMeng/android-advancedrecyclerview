@@ -19,21 +19,25 @@ apply plugin: 'com.android.application'
 apply from: '../common/android-signing-utils.gradle'
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
+    namespace 'com.h6ah4i.android.example.advrecyclerview'
+    compileSdk rootProject.ext.compileSdkVersion
 
     defaultConfig {
         applicationId "com.h6ah4i.android.example.advrecyclerview"
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
+        minSdk rootProject.ext.minSdkVersion
+        targetSdk rootProject.ext.targetSdkVersion
         versionCode 30
         versionName "1.0.0"
         vectorDrawables.useSupportLibrary = true
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    buildFeatures {
+        buildConfig = true
     }
 
     signingConfigs {
@@ -46,7 +50,7 @@ android {
         // for saving build time during debugging
         lollipop {
             dimension "minSdk"
-            minSdkVersion 21
+            minSdk 21
         }
         ics {
             dimension "minSdk"
@@ -73,3 +77,6 @@ dependencies {
     implementation 'com.google.android.material:material:1.0.0'
     implementation ('com.h6ah4i.android.tablayouthelper:tablayouthelper:1.0.0')
 }
+
+
+

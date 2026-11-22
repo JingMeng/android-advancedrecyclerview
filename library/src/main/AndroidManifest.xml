@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
        Copyright (C) 2015 Haruki Hasegawa
 
@@ -13,6 +14,6 @@
        See the License for the specific language governing permissions and
        limitations under the License.
 -->
-<manifest
-    package="com.h6ah4i.android.widget.advrecyclerview">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 </manifest>
+
